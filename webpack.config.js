@@ -3,7 +3,7 @@ const path = require('path'); //nodejs утилита для работы с п�
 const DIST_PATH = path.resolve(__dirname, './dist'); //абсолютный путь к директории dist
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const devMode = process.env.NODE_ENV !== 'production'
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 	entry: './src/index.js', //точка входа
@@ -16,12 +16,7 @@ module.exports = {
 		{
 			test: /\.js$/, //Все файлы с расширением js
 			exclude: /node_modules|dist/, //За исключением директорий node_modules и dist
-			use: [
-				{
-					loader: 'babel-loader', //Использовать babel-loader (компилировать ES6 в ES5)
-					options: {presets: ["env"]}
-				}
-			] 
+			use: 'babel-loader'
 		},
 		{
 	    test: /\.(sa|sc|c)ss$/,

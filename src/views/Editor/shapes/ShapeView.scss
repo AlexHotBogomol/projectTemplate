@@ -1,0 +1,13 @@
+.Shape--rect{
+  background: aqua;
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+}
+.isActive{
+  outline: 2px dashed #000;
+  outline-offset: 4px;
+}

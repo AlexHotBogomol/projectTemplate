@@ -34,7 +34,7 @@ export default class Mediator{
 
 		 this.channels[eventName].forEach((listener) => {
 		 	listener(eventName, data);
-		 })
+		 });
 
 		return this;
 	}
