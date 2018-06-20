@@ -69,12 +69,16 @@ export default class ShapeView{
     }
     handle=(e)=>{
         var block = this.rootElement;
-        block.style.position = "absolute";
+
+
         var coords = getCoords(block);
         var shiftX = e.pageX - coords.left;
         var shiftY = e.pageY - coords.top;
+        block.style.position = "absolute";
+        block.style.margin="0";
         moveAt(e);
         document.body.appendChild(block);
+        block.style.zIndex = 1000;
         document.addEventListener("mousemove", handler);
         document.addEventListener("mouseup", function(e){
             document.removeEventListener("mousemove", handler);
