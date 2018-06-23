@@ -3,8 +3,67 @@
   width: 100px;
   height: 100px;
   margin: 10px;
+  position: absolute;
 }
-.isActive{
+
+.Shape--rect.isActive{
   outline: 2px dashed #000;
   outline-offset: 4px;
+  .sizer{
+    display: block;
+  }
+}
+
+.sizer{
+  display: none;
+  height: 10px;
+  width: 10px;
+  background: crimson;
+  position: absolute;
+
+}
+
+.lt{
+  top: -5px;
+  left: -5px;
+  cursor: se-resize;
+}
+
+.rt{
+  top: -5px;
+  right: -5px;
+  cursor: sw-resize;
+}
+
+.lb{
+  bottom: -5px;
+  left: -5px;
+  cursor: ne-resize;
+}
+
+.rb{
+  bottom: -5px;
+  right: -5px;
+  cursor :nw-resize;
+}
+
+.lc{
+  top: calc(50% - 5px);
+  left: -5px;
+  cursor: w-resize;
+}
+.rc{
+  top: calc(50% - 5px);
+  right: -5px;
+  cursor :e-resize
+}
+.tc{
+  top: -5px;
+  left: calc(50% - 5px);
+  cursor: n-resize
+}
+.bc{
+  bottom: -5px;
+  left: calc(50% - 5px);
+  cursor: s-resize
 }
